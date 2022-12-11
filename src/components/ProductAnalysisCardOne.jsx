@@ -5,7 +5,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import StarOutlineIcon from "@mui/icons-material/StarOutline";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import SkuProduct from "../assets/images/sku-product.png";
-import SFlagRing from "../assets/images/flags/french.jpg";
+import saudiImg from "../assets/images/noon-saudi.svg";
 
 const ProductAnalysisCardOne = () => {
   const [labelTime, setLabelTime] = useState("24H");
@@ -21,7 +21,7 @@ const ProductAnalysisCardOne = () => {
     }
   };
   return (
-    <Card sx={{ padding: "1.5rem", width: { lg: "60%" } }} >
+    <Card sx={{ padding: "1.5rem", width: { lg: "60%" }, borderRadius: "10px", boxShadow: 3 }}>
       <Stack direction={{ md: "row" }} justifyContent="space-between" spacing={3}>
         <div style={{ width: { xs: "100%", md: "40%" } }}>
           <Stack direction="column" spacing={1} fontSize="12px">
@@ -59,7 +59,7 @@ const ProductAnalysisCardOne = () => {
               </span>
               <span style={{ color: "#7A797D" }}>
                 <Link href="/marketplace">
-                  <img src={SFlagRing} width="20px" alt="" />
+                  <img src={saudiImg} width="40px" alt="" />
                 </Link>
               </span>
             </Stack>
