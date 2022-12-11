@@ -68,21 +68,9 @@ const ComparableTradeVolume = () => {
           }}
         >
           {/* Section heading */}
-          <Stack
-            direction="row"
-            spacing={2}
-            alignItems="center"
-            justifyContent="space-between"
-            sx={{ padding: "0 .75rem 1.25rem .75rem" }}
-          >
-            <h2 style={{ fontSize: "12px", color: "#7A797D" }}>
-              Comparable Trade Volume
-            </h2>
-            <Link
-              href="#"
-              underline="none"
-              sx={{ fontSize: "12px", fontWeight: "600" }}
-            >
+          <Stack direction="row" spacing={2} alignItems="center" justifyContent="space-between" sx={{ padding: "0 .75rem 1.25rem .75rem" }}>
+            <h2 style={{ fontSize: "12px", color: "#7A797D" }}>Comparable Trade Volume</h2>
+            <Link href="#" underline="none" sx={{ fontSize: "12px", fontWeight: "600" }}>
               <Stack direction="row" alignItems="center">
                 <span>See All Skus</span>
                 <KeyboardArrowRightIcon />
@@ -92,10 +80,7 @@ const ComparableTradeVolume = () => {
 
           {/* Section Body */}
           <TableContainer component={Paper}>
-            <Table
-              sx={{ width: "100%", borderTop: "2px solid lightgray" }}
-              aria-label="simple table"
-            >
+            <Table sx={{ width: "100%", borderTop: "2px solid lightgray" }} aria-label="simple table">
               <TableHead>
                 <TableRow>
                   <TableCell></TableCell>
@@ -143,17 +128,9 @@ const ComparableTradeVolume = () => {
               </TableHead>
               <TableBody>
                 {data.map((item, i) => (
-                  <TableRow
-                    key={i}
-                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  >
+                  <TableRow key={i} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
                     <TableCell component="td" scope="row" sx={{ py: ".40rem" }}>
-                      <img
-                        src={basketImg}
-                        alt="basket"
-                        width="50px"
-                        height="40px"
-                      />
+                      <img src={basketImg} alt="basket" width="50px" height="40px" />
                     </TableCell>
                     <TableCell
                       align="center"
@@ -164,25 +141,13 @@ const ComparableTradeVolume = () => {
                       }}
                     >
                       <Stack direction="column">
-                        <Link
-                          href="#"
-                          underline="none"
-                          sx={{ fontWeight: "700" }}
-                        >
+                        <Link href="#" underline="none" sx={{ fontWeight: "700" }}>
                           {item.id}
                         </Link>
-                        <Link
-                          href="#"
-                          underline="none"
-                          sx={{ fontSize: "10px" }}
-                        >
+                        <Link href="#" underline="none" sx={{ fontSize: "10px" }}>
                           {item.category}
                         </Link>
-                        <Link
-                          href="#"
-                          underline="none"
-                          sx={{ fontSize: "10px" }}
-                        >
+                        <Link href="#" underline="none" sx={{ fontSize: "10px" }}>
                           {item.brand}
                         </Link>
                       </Stack>
@@ -196,12 +161,7 @@ const ComparableTradeVolume = () => {
                       }}
                     >
                       <Link href={item.marketplace}>
-                        <img
-                          src={noonImg}
-                          alt="marketplace"
-                          width="15px"
-                          height="15px"
-                        />
+                        <img src={noonImg} alt="marketplace" width="15px" height="15px" />
                       </Link>
                     </TableCell>
                     <TableCell
@@ -241,21 +201,9 @@ const ComparableTradeVolume = () => {
           }}
         >
           {/* Section heading */}
-          <Stack
-            direction="row"
-            spacing={2}
-            alignItems="center"
-            justifyContent="space-between"
-            sx={{ padding: "0 .75rem 1.25rem .75rem" }}
-          >
-            <h2 style={{ fontSize: "12px", color: "#7A797D" }}>
-              Comparable Trade Volume
-            </h2>
-            <Link
-              href="#"
-              underline="none"
-              sx={{ fontSize: "12px", fontWeight: "600" }}
-            >
+          <Stack direction="row" spacing={2} alignItems="center" justifyContent="space-between" sx={{ padding: "0 .75rem 1.25rem .75rem" }}>
+            <h2 style={{ fontSize: "12px", color: "#7A797D" }}>Comparable Trade Volume</h2>
+            <Link href="#" underline="none" sx={{ fontSize: "12px", fontWeight: "600" }}>
               <Stack direction="row" alignItems="center">
                 <span>See All Skus</span>
                 <KeyboardArrowRightIcon />
@@ -265,10 +213,7 @@ const ComparableTradeVolume = () => {
 
           {/* Section Body */}
           <TableContainer component={Paper}>
-            <Table
-              sx={{ width: "100%", borderTop: "2px solid lightgray" }}
-              aria-label="simple table"
-            >
+            <Table sx={{ width: "100%", borderTop: "2px solid lightgray" }} aria-label="simple table">
               <TableHead>
                 <TableRow>
                   <TableCell></TableCell>
@@ -316,17 +261,9 @@ const ComparableTradeVolume = () => {
               </TableHead>
               <TableBody>
                 {data.map((item, i) => (
-                  <TableRow
-                    key={i}
-                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  >
+                  <TableRow key={i} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
                     <TableCell component="td" scope="row" sx={{ py: ".40rem" }}>
-                      <img
-                        src={basketImg}
-                        alt="basket"
-                        width="50px"
-                        height="40px"
-                      />
+                      <img src={basketImg} alt="basket" width="50px" height="40px" />
                     </TableCell>
                     <TableCell
                       align="center"
@@ -337,25 +274,13 @@ const ComparableTradeVolume = () => {
                       }}
                     >
                       <Stack direction="column">
-                        <Link
-                          href="#"
-                          underline="none"
-                          sx={{ fontWeight: "700" }}
-                        >
+                        <Link href="#" underline="none" sx={{ fontWeight: "700" }}>
                           {item.id}
                         </Link>
-                        <Link
-                          href="#"
-                          underline="none"
-                          sx={{ fontSize: "10px" }}
-                        >
+                        <Link href="#" underline="none" sx={{ fontSize: "10px" }}>
                           {item.category}
                         </Link>
-                        <Link
-                          href="#"
-                          underline="none"
-                          sx={{ fontSize: "10px" }}
-                        >
+                        <Link href="#" underline="none" sx={{ fontSize: "10px" }}>
                           {item.brand}
                         </Link>
                       </Stack>
@@ -369,12 +294,7 @@ const ComparableTradeVolume = () => {
                       }}
                     >
                       <Link href={item.marketplace}>
-                        <img
-                          src={noonImg}
-                          alt="marketplace"
-                          width="15px"
-                          height="15px"
-                        />
+                        <img src={noonImg} alt="marketplace" width="15px" height="15px" />
                       </Link>
                     </TableCell>
                     <TableCell

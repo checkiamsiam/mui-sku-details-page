@@ -21,7 +21,7 @@ const ProductAnalysisCardOne = () => {
     }
   };
   return (
-    <Card sx={{ padding: "1.5rem", width: { lg: "60%" } }}>
+    <Card sx={{ padding: "1.5rem", width: { lg: "60%" } }} >
       <Stack direction={{ md: "row" }} justifyContent="space-between" spacing={3}>
         <div style={{ width: { xs: "100%", md: "40%" } }}>
           <Stack direction="column" spacing={1} fontSize="12px">
