@@ -7,9 +7,9 @@ const BuyBoxPriceStatus = () => {
   //   Tab Controls
   const [value, setValue] = useState("1");
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  // const handleChange = (event, newValue) => {
+  //   setValue(newValue);
+  // };
 
   //   Tab Data
   const tabData = [
@@ -28,7 +28,7 @@ const BuyBoxPriceStatus = () => {
     return balanceData;
   };
 
-//   Daily Chart
+  //   Daily Chart
   const getDayBalance = () => {
     let dayDummyData = generateData();
     let dayBalanceData = [];
@@ -43,7 +43,7 @@ const BuyBoxPriceStatus = () => {
     return [{ data: dayBalanceData }];
   };
 
-//   Weekly Chart
+  //   Weekly Chart
   const getWeekBalance = () => {
     let weekDummyData = generateData();
     let weekBalanceData = [];
@@ -58,7 +58,7 @@ const BuyBoxPriceStatus = () => {
     return [{ data: weekBalanceData }];
   };
 
-//   Monthly Chart
+  //   Monthly Chart
   const getMonthBalance = () => {
     let monthDummyData = generateData();
     let monthBalanceData = [];
@@ -73,7 +73,7 @@ const BuyBoxPriceStatus = () => {
     return [{ data: monthBalanceData }];
   };
 
-//   Yearly Chart
+  //   Yearly Chart
   const getYearBalance = () => {
     let yearDummyData = generateData();
     let yearBalanceData = [];
@@ -88,7 +88,6 @@ const BuyBoxPriceStatus = () => {
     return [{ data: yearBalanceData }];
   };
 
-  
   //   Chart Controls
   const colors = ["#0acf97"];
   const apexChartOpts = {
@@ -157,10 +156,19 @@ const BuyBoxPriceStatus = () => {
             BUYBOX PRICE STATUS
           </h2>
           <Box sx={{}}>
-            <TabList onChange={handleChange} aria-label="lab API tabs example">
+            <TabList
+              // onChange={handleChange}
+              aria-label="lab API tabs example"
+              TabIndicatorProps={{
+                style: {
+                  display: "none",
+                },
+              }}
+            >
               {tabData.map((tab) => (
                 <Button
                   key={tab.value}
+                  value={tab.value}
                   variant={value === tab.value ? "contained" : "text"}
                   size="small"
                   onClick={() => setValue(tab.value)}
@@ -181,7 +189,6 @@ const BuyBoxPriceStatus = () => {
             options={apexChartOpts}
             series={getDayBalance()}
             type="area"
-            className="apex-charts"
             height={346}
           />
         </TabPanel>
@@ -190,7 +197,6 @@ const BuyBoxPriceStatus = () => {
             options={apexChartOpts}
             series={getWeekBalance()}
             type="area"
-            className="apex-charts"
             height={346}
           />
         </TabPanel>
@@ -199,7 +205,6 @@ const BuyBoxPriceStatus = () => {
             options={apexChartOpts}
             series={getMonthBalance()}
             type="area"
-            className="apex-charts"
             height={346}
           />
         </TabPanel>
@@ -208,7 +213,6 @@ const BuyBoxPriceStatus = () => {
             options={apexChartOpts}
             series={getYearBalance()}
             type="area"
-            className="apex-charts"
             height={346}
           />
         </TabPanel>

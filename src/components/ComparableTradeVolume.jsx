@@ -60,6 +60,7 @@ const data = [
 ];
 
 const ComparableTradeVolume = () => {
+  const gray = "#7A797D";
   return (
     <section style={{ margin: "30px 0" }}>
       <Stack direction={{ xs: "column", lg: "row" }} spacing={2}>
@@ -68,7 +69,7 @@ const ComparableTradeVolume = () => {
           <Card
             sx={{
               boxShadow: 3,
-              pt: ".75rem",
+              pt: ".5rem",
               borderRadius: "10px",
             }}
           >
@@ -78,9 +79,9 @@ const ComparableTradeVolume = () => {
               spacing={2}
               alignItems="center"
               justifyContent="space-between"
-              sx={{ padding: "0 .75rem 1.25rem .75rem" }}
+              sx={{ padding: "0 .75rem 1rem .75rem" }}
             >
-              <h2 style={{ fontSize: "12px", color: "#7A797D" }}>
+              <h2 style={{ fontSize: "15px", color: gray }}>
                 Comparable Trade Volume
               </h2>
               <Link
@@ -109,7 +110,8 @@ const ComparableTradeVolume = () => {
                       sx={{
                         fontSize: "12px",
                         fontWeight: "600",
-                        color: "#7A797D",
+                        color: gray,
+                        py: ".4rem",
                       }}
                     >
                       SKU
@@ -119,7 +121,8 @@ const ComparableTradeVolume = () => {
                       sx={{
                         fontSize: "12px",
                         fontWeight: "600",
-                        color: "#7A797D",
+                        color: gray,
+                        py: ".4rem",
                       }}
                     >
                       Marketplace
@@ -129,7 +132,8 @@ const ComparableTradeVolume = () => {
                       sx={{
                         fontSize: "12px",
                         fontWeight: "600",
-                        color: "#7A797D",
+                        color: gray,
+                        py: ".4rem",
                       }}
                     >
                       Buybox Sale Price
@@ -139,7 +143,8 @@ const ComparableTradeVolume = () => {
                       sx={{
                         fontSize: "12px",
                         fontWeight: "600",
-                        color: "#7A797D",
+                        color: gray,
+                        py: ".4rem",
                       }}
                     >
                       Chg 24H
@@ -168,7 +173,7 @@ const ComparableTradeVolume = () => {
                         align="center"
                         sx={{
                           fontSize: "12px",
-                          color: "#7A797D",
+                          color: gray,
                           py: ".40rem",
                         }}
                       >
@@ -200,7 +205,7 @@ const ComparableTradeVolume = () => {
                         align="center"
                         sx={{
                           fontSize: "12px",
-                          color: "#7A797D",
+                          color: gray,
                           py: ".40rem",
                         }}
                       >
@@ -217,7 +222,7 @@ const ComparableTradeVolume = () => {
                         align="center"
                         sx={{
                           fontSize: "12px",
-                          color: "#7A797D",
+                          color: gray,
                           py: ".40rem",
                         }}
                       >
@@ -239,7 +244,7 @@ const ComparableTradeVolume = () => {
               </Table>
             </TableContainer>
           </Card>
-          <p style={{ fontSize: "12px", color: "#7A797D" }}>
+          <p style={{ fontSize: "12px", color: gray }}>
             Of all the top SKUs on marketplace, these are the closest in trade
             volume.
           </p>
@@ -250,7 +255,7 @@ const ComparableTradeVolume = () => {
           <Card
             sx={{
               boxShadow: 3,
-              pt: ".75rem",
+              pt: ".5rem",
               borderRadius: "10px",
             }}
           >
@@ -260,9 +265,9 @@ const ComparableTradeVolume = () => {
               spacing={2}
               alignItems="center"
               justifyContent="space-between"
-              sx={{ padding: "0 .75rem 1.25rem .75rem" }}
+              sx={{ padding: "0 .75rem 1rem .75rem" }}
             >
-              <h2 style={{ fontSize: "12px", color: "#7A797D" }}>
+              <h2 style={{ fontSize: "15px", color: gray }}>
                 Comparable Trade Volume
               </h2>
               <Link
@@ -291,7 +296,8 @@ const ComparableTradeVolume = () => {
                       sx={{
                         fontSize: "12px",
                         fontWeight: "600",
-                        color: "#7A797D",
+                        color: gray,
+                        py: ".4rem",
                       }}
                     >
                       SKU
@@ -301,7 +307,8 @@ const ComparableTradeVolume = () => {
                       sx={{
                         fontSize: "12px",
                         fontWeight: "600",
-                        color: "#7A797D",
+                        color: gray,
+                        py: ".4rem",
                       }}
                     >
                       Marketplace
@@ -311,7 +318,8 @@ const ComparableTradeVolume = () => {
                       sx={{
                         fontSize: "12px",
                         fontWeight: "600",
-                        color: "#7A797D",
+                        color: gray,
+                        py: ".4rem",
                       }}
                     >
                       Buybox Sale Price
@@ -321,7 +329,8 @@ const ComparableTradeVolume = () => {
                       sx={{
                         fontSize: "12px",
                         fontWeight: "600",
-                        color: "#7A797D",
+                        color: gray,
+                        py: ".4rem",
                       }}
                     >
                       Chg 24H
@@ -350,7 +359,7 @@ const ComparableTradeVolume = () => {
                         align="center"
                         sx={{
                           fontSize: "12px",
-                          color: "#7A797D",
+                          color: gray,
                           py: ".40rem",
                         }}
                       >
@@ -382,7 +391,7 @@ const ComparableTradeVolume = () => {
                         align="center"
                         sx={{
                           fontSize: "12px",
-                          color: "#7A797D",
+                          color: gray,
                           py: ".40rem",
                         }}
                       >
@@ -399,7 +408,7 @@ const ComparableTradeVolume = () => {
                         align="center"
                         sx={{
                           fontSize: "12px",
-                          color: "#7A797D",
+                          color: gray,
                           py: ".40rem",
                         }}
                       >
@@ -421,7 +430,7 @@ const ComparableTradeVolume = () => {
               </Table>
             </TableContainer>
           </Card>
-          <p style={{ fontSize: "12px", color: "#7A797D" }}>
+          <p style={{ fontSize: "12px", color: gray }}>
             Of all the top SKUs on marketplace, these are the closest in trade
             volume.
           </p>
