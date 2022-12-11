@@ -62,9 +62,9 @@ const data = [
 const ComparableTradeVolume = () => {
   return (
     <section style={{ margin: "30px 0" }}>
-      <Stack direction={{ sm: "column", md: "row" }} spacing={2}>
+      <Stack direction={{ xs: "column", lg: "row" }} spacing={2}>
         {/* Left Card */}
-        <Box sx={{ width: { sm: "100%", lg: "50%" } }}>
+        <Box sx={{ width: { xs: "100%", lg: "50%" } }}>
           <Card
             sx={{
               boxShadow: 3,
@@ -246,7 +246,7 @@ const ComparableTradeVolume = () => {
         </Box>
 
         {/* Right Card */}
-        <Box sx={{ width: { sm: "100%", lg: "50%" } }}>
+        <Box sx={{ width: { xs: "100%", lg: "50%" } }}>
           <Card
             sx={{
               boxShadow: 3,
