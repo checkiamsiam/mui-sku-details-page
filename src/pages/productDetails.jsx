@@ -1,9 +1,13 @@
-
+import { Container } from "@mui/material";
+import ProductAnalysisTable from "../components/ProductAnalysisTable";
 import ProductDetailsAnalysisSection from "../components/ProductDetailsAnalysisSection";
 
 const ProductDetails = () => {
   return (
-    <ProductDetailsAnalysisSection/>
+    <Container maxWidth="xl">
+      <ProductDetailsAnalysisSection />
+      <ProductAnalysisTable />
+    </Container>
   );
 };
 

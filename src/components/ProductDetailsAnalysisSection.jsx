@@ -6,7 +6,7 @@ import ProductAnalysisCardTwo from "./ProductAnalysisCardTwo";
 
 const ProductDetailsAnalysisSection = () => {
   return (
-    <Container maxWidth="xl">
+    <section>
       <Stack direction={{ sm: "column", lg: "row" }} spacing={2}>
         <>
           <ProductAnalysisCardOne />
@@ -36,7 +36,7 @@ const ProductDetailsAnalysisSection = () => {
           </div>
         </Stack>
       </Hidden>
-    </Container>
+    </section>
   );
 };
 

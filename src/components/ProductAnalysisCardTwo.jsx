@@ -5,7 +5,7 @@ import InfoIcon from "@mui/icons-material/Info";
 
 const ProductAnalysisCardTwo = () => {
   return (
-    <Card sx={{ padding: "1.5rem", width: { sm: "100%", lg: "40%" } }}>
+    <Card sx={{ padding: "1.5rem", width: { lg: "40%" } }}>
       <Stack direction="column" spacing={1} fontSize="12px">
         <Stack direction="row" justifyContent="space-between" alignItems="center">
           <span style={{ width: "50%", fontWeight: "bold", color: "#7A797D" }}>
