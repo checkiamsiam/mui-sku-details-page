@@ -1,13 +1,13 @@
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import { Card, Container, Link, Stack } from "@mui/material";
-import React from "react";
+import { Card, Link, Stack } from "@mui/material";
+import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
+import React from "react";
 import basketImg from "../assets/images/basket.png";
 import noonImg from "../assets/images/noon.png";
 
@@ -56,7 +56,7 @@ const data = [
 
 const ComparableTradeVolume = () => {
   return (
-    <Container maxWidth="xl" sx={{ my: "30px" }}>
+    <section style={{ margin: "30px 0" }}>
       <Stack direction={{ sm: "column", md: "row" }} spacing={2}>
         {/* Left Card */}
         <Card
@@ -404,7 +404,7 @@ const ComparableTradeVolume = () => {
           </TableContainer>
         </Card>
       </Stack>
-    </Container>
+    </section>
   );
 };
 
