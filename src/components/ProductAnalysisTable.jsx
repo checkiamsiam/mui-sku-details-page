@@ -50,22 +50,30 @@ const ProductAnalysisTable = () => {
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.name} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-              <TableCell component="th" scope="row">
+              <TableCell component="th" scope="row" sx={{ fontSize: "12px", color: "#7A797D" }}>
                 {row?.name}
               </TableCell>
-              <TableCell align="center">{row?.offerPrice}</TableCell>
-              <TableCell align="center">{row?.soh}</TableCell>
-              <TableCell align="center">
+              <TableCell align="center" sx={{ fontSize: "12px", color: "#7A797D" }}>
+                {row?.offerPrice}
+              </TableCell>
+              <TableCell align="center" sx={{ fontSize: "12px", color: "#7A797D" }}>
+                {row?.soh}
+              </TableCell>
+              <TableCell align="center" sx={{ fontSize: "12px", color: "#7A797D" }}>
                 <br />
               </TableCell>
-              <TableCell align="center">
+              <TableCell align="center" sx={{ fontSize: "12px", color: "#7A797D" }}>
                 <br />
               </TableCell>
-              <TableCell align="center">{row?.rank}</TableCell>
-              <TableCell align="center">
+              <TableCell align="center" sx={{ fontSize: "12px", color: "#7A797D" }}>
+                {row?.rank}
+              </TableCell>
+              <TableCell align="center" sx={{ fontSize: "12px", color: "#7A797D" }}>
                 <br />
               </TableCell>
-              <TableCell align="center">{row?.share}</TableCell>
+              <TableCell align="center" sx={{ fontSize: "12px", color: "#7A797D" }}>
+                {row?.share}
+              </TableCell>
             </TableRow>
           ))}
           <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
