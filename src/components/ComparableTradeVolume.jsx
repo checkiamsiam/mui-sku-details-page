@@ -18,7 +18,7 @@ const data = [
     brand: "Tommy Hilfiger",
     marketplace: "#",
     sale_price: 30,
-    chg: "15%",
+    chg: 15,
   },
   {
     id: "N35997789A",
@@ -26,7 +26,7 @@ const data = [
     brand: "Tommy Hilfiger",
     marketplace: "#",
     sale_price: 30,
-    chg: "-4.04%",
+    chg: -4.04,
   },
   {
     id: "N35997789A",
@@ -34,7 +34,7 @@ const data = [
     brand: "Tommy Hilfiger",
     marketplace: "#",
     sale_price: 22,
-    chg: "15%",
+    chg: 15,
   },
   {
     id: "N35997789A",
@@ -42,7 +42,7 @@ const data = [
     brand: "Tommy Hilfiger",
     marketplace: "#",
     sale_price: 1,
-    chg: "15%",
+    chg: 15,
   },
   {
     id: "N35997789A",
@@ -50,7 +50,7 @@ const data = [
     brand: "Tommy Hilfiger",
     marketplace: "#",
     sale_price: 3,
-    chg: "15%",
+    chg: 15,
   },
 ];
 
@@ -218,11 +218,11 @@ const ComparableTradeVolume = () => {
                       align="center"
                       sx={{
                         fontSize: "12px",
-                        color: "#7A797D",
+                        color: `${item.chg > 0 ? "green" : "red"}`,
                         py: ".40rem",
                       }}
                     >
-                      {item.chg}
+                      {item.chg}%
                     </TableCell>
                   </TableRow>
                 ))}
@@ -391,11 +391,11 @@ const ComparableTradeVolume = () => {
                       align="center"
                       sx={{
                         fontSize: "12px",
-                        color: "#7A797D",
+                        color: `${item.chg > 0 ? "green" : "red"}`,
                         py: ".40rem",
                       }}
                     >
-                      {item.chg}
+                      {item.chg}%
                     </TableCell>
                   </TableRow>
                 ))}
