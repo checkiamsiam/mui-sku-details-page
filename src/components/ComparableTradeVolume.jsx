@@ -82,7 +82,7 @@ const ComparableTradeVolume = () => {
               sx={{ padding: "0 .75rem 1rem .75rem" }}
             >
               <h2 style={{ fontSize: "15px", color: gray }}>
-                Comparable Trade Volume
+                People also view
               </h2>
               <Link
                 href="#"
@@ -268,7 +268,7 @@ const ComparableTradeVolume = () => {
               sx={{ padding: "0 .75rem 1rem .75rem" }}
             >
               <h2 style={{ fontSize: "15px", color: gray }}>
-                Comparable Trade Volume
+              People also view
               </h2>
               <Link
                 href="#"

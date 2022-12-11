@@ -19,6 +19,7 @@ import {
   TextField,
   Typography,
   DialogContentText,
+  Chip,
 } from "@mui/material";
 import { Stack } from "@mui/system";
 import React, { useEffect, useRef, useState } from "react";
@@ -88,47 +89,27 @@ const ProductAnalysisCardOne = () => {
         <Stack direction={{ md: "row" }} justifyContent="space-between" spacing={3}>
           <div style={{ width: { xs: "100%", md: "40%" } }}>
             <Stack direction="column" spacing={1} fontSize="12px">
-              <Stack direction="row" spacing={2} alignItems="center" justifyContent="space-between">
+              <Stack direction="row" spacing={10} alignItems="center" justifyContent="space-between">
                 <Stack direction="row" spacing={2} alignItems="center">
                   <img src={SkuProduct} width="80px" height="70px" alt="" />
                   <Link href="#" underline="none">
                     N20984440A
                   </Link>
                 </Stack>
-                <Stack direction="row">
-                  <IconButton
-                    id="star-button"
-                    aria-controls={watchListMenuOpen && "basic-menu"}
-                    aria-haspopup="true"
-                    aria-expanded={watchListMenuOpen && "true"}
-                    onClick={handleStarClick}
-                  >
-                    <StarOutlineIcon />
-                  </IconButton>
-                  <IconButton
-                    id="notify-button"
-                    aria-controls={openAddAlertModal && "basic-menu"}
-                    aria-haspopup="true"
-                    aria-expanded={openAddAlertModal && "true"}
-                    onClick={() => setOpenAddAlertModal(true)}
-                  >
-                    <NotificationsNoneIcon />
-                  </IconButton>
-                </Stack>
               </Stack>
-              <Stack direction="row" justifyContent="space-between" alignItems="center">
+              <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={10}>
                 <span style={{ fontWeight: "bold", color: gray }}>
                   Rank <InfoIcon htmlColor={lightGray} fontSize="3px" />
                 </span>
                 <span style={{ color: gray }}>0</span>
               </Stack>
-              <Stack direction="row" justifyContent="space-between" alignItems="center">
+              <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={10}>
                 <span style={{ fontWeight: "bold", color: gray }}>
                   Rate <InfoIcon htmlColor={lightGray} fontSize="3px" />
                 </span>
                 <span style={{ color: gray }}>0</span>
               </Stack>
-              <Stack direction="row" justifyContent="space-between" alignItems="center">
+              <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={10}>
                 <span style={{ fontWeight: "bold", color: gray }}>
                   SKU Marketplace <InfoIcon htmlColor={lightGray} fontSize="3px" />
                 </span>
@@ -138,13 +119,13 @@ const ProductAnalysisCardOne = () => {
                   </Link>
                 </span>
               </Stack>
-              <Stack direction="row" justifyContent="space-between" alignItems="center">
+              <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={10}>
                 <span style={{ fontWeight: "bold", color: gray }}>
                   No. Of Sellers <InfoIcon htmlColor={lightGray} fontSize="3px" />
                 </span>
                 <span style={{ color: gray }}>0</span>
               </Stack>
-              <Stack direction="row" justifyContent="space-between" alignItems="center">
+              <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={10}>
                 <span style={{ fontWeight: "bold", color: gray }}>
                   Tags <InfoIcon htmlColor={lightGray} fontSize="3px" />
                 </span>
@@ -154,6 +135,26 @@ const ProductAnalysisCardOne = () => {
           </div>
           <div style={{ width: { xs: "100%", md: "30%" } }}>
             <Stack direction="column" fontSize="12px" justifyContent="center" alignItems="center" spacing={0} color={gray} height="100%">
+              <Stack direction="row">
+                <IconButton
+                  id="star-button"
+                  aria-controls={watchListMenuOpen && "basic-menu"}
+                  aria-haspopup="true"
+                  aria-expanded={watchListMenuOpen && "true"}
+                  onClick={handleStarClick}
+                >
+                  <StarOutlineIcon />
+                </IconButton>
+                <IconButton
+                  id="notify-button"
+                  aria-controls={openAddAlertModal && "basic-menu"}
+                  aria-haspopup="true"
+                  aria-expanded={openAddAlertModal && "true"}
+                  onClick={() => setOpenAddAlertModal(true)}
+                >
+                  <NotificationsNoneIcon />
+                </IconButton>
+              </Stack>
               <p>3,943 Watchlists</p>
               <p>10 price Alerts</p>
               <p style={{ fontWeight: "bold" }}>Updated: 21 minutes ago</p>
@@ -184,9 +185,11 @@ const ProductAnalysisCardOne = () => {
             </Typography>
 
             <Stack direction="row" justifyContent="space-between" spacing={2} fontSize="12px" marginTop="10px">
-              <Stack width="75%">
-                <Stack direction="row" justifyContent="space-between">
+              <Stack width="100%">
+                <Stack direction="row" alignItems="center" justifyContent="space-between">
                   <span>Low</span>
+                  <Chip onClick={() => handleLabelTime(labelTime)} label={labelTime} color="primary" size="small" />
+
                   <span>high</span>
                 </Stack>
                 <LinearProgress
@@ -199,23 +202,20 @@ const ProductAnalysisCardOne = () => {
                     margin: "2px 0px",
                   }}
                 />
-                <Stack direction="row" justifyContent="space-between">
+                <Stack direction="row" paddingTop="5px" justifyContent="space-between">
                   <span>SAR 17,87</span>
                   <span>SAR 20,87</span>
                 </Stack>
               </Stack>
-              <Button onClick={() => handleLabelTime(labelTime)} variant="contained" size="small" sx={{ padding: "0px 30px" }}>
-                {labelTime}
-              </Button>
             </Stack>
             <Stack fontSize="12px" paddingTop="1rem">
-              <Stack direction="row" justifyContent="space-between" alignItems="center">
+              <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={10}>
                 <span style={{ fontWeight: "bold", color: gray }}>
                   Estimated SOH <InfoIcon htmlColor={lightGray} fontSize="3px" />
                 </span>
                 <span style={{ color: gray }}>0</span>
               </Stack>
-              <Stack direction="row" justifyContent="space-between" alignItems="center">
+              <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={10}>
                 <span style={{ fontWeight: "bold", color: gray }}>
                   Estimated SU Last 24h <InfoIcon htmlColor={lightGray} fontSize="3px" />
                 </span>

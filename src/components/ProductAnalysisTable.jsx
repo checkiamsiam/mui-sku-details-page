@@ -18,123 +18,66 @@ const rows = [
 const ProductAnalysisTable = () => {
   return (
     <section style={{ margin: "40px 0" }}>
-      <TableContainer
-        component={Paper}
-        sx={{ backgroundColor: "#F8F9FA", boxShadow: 3, borderRadius: "10px" }}
-      >
+      <TableContainer component={Paper} sx={{ backgroundColor: "#F8F9FA", boxShadow: 3, borderRadius: "10px" }}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell
-                align="center"
-                sx={{ fontSize: "12px", fontWeight: "bold" }}
-              >
+              <TableCell align="center" sx={{ fontSize: "12px", fontWeight: "bold" }}>
                 Store Name
               </TableCell>
-              <TableCell
-                align="center"
-                sx={{ fontSize: "12px", fontWeight: "bold" }}
-              >
+              <TableCell align="center" sx={{ fontSize: "12px", fontWeight: "bold" }}>
                 Offer Price
               </TableCell>
-              <TableCell
-                align="center"
-                sx={{ fontSize: "12px", fontWeight: "bold" }}
-              >
+              <TableCell align="center" sx={{ fontSize: "12px", fontWeight: "bold" }}>
                 SOH
               </TableCell>
-              <TableCell
-                align="center"
-                sx={{ fontSize: "12px", fontWeight: "bold" }}
-              >
+              <TableCell align="center" sx={{ fontSize: "12px", fontWeight: "bold" }}>
                 Value (24H)
               </TableCell>
-              <TableCell
-                align="center"
-                sx={{ fontSize: "12px", fontWeight: "bold" }}
-              >
+              <TableCell align="center" sx={{ fontSize: "12px", fontWeight: "bold" }}>
                 Fulfillment Type
               </TableCell>
-              <TableCell
-                align="center"
-                sx={{ fontSize: "12px", fontWeight: "bold" }}
-              >
+              <TableCell align="center" sx={{ fontSize: "12px", fontWeight: "bold" }}>
                 Offer Rank
               </TableCell>
-              <TableCell
-                align="center"
-                sx={{ fontSize: "12px", fontWeight: "bold" }}
-              >
+              <TableCell align="center" sx={{ fontSize: "12px", fontWeight: "bold" }}>
                 Store Rate
               </TableCell>
-              <TableCell
-                align="center"
-                sx={{ fontSize: "12px", fontWeight: "bold" }}
-              >
+              <TableCell align="center" sx={{ fontSize: "12px", fontWeight: "bold" }}>
                 Store Share
               </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.map((row, i) => (
-              <TableRow
-                key={i}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell
-                  component="th"
-                  scope="row"
-                  sx={{ fontSize: "12px", color: "#7A797D" }}
-                >
+              <TableRow key={i} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+                <TableCell component="th" scope="row" sx={{ fontSize: "12px", color: "#7A797D" }}>
                   {row?.name}
                 </TableCell>
-                <TableCell
-                  align="center"
-                  sx={{ fontSize: "12px", color: "#7A797D" }}
-                >
+                <TableCell align="center" sx={{ fontSize: "12px", color: "#7A797D" }}>
                   {row?.offerPrice}
                 </TableCell>
-                <TableCell
-                  align="center"
-                  sx={{ fontSize: "12px", color: "#7A797D" }}
-                >
+                <TableCell align="center" sx={{ fontSize: "12px", color: "#7A797D" }}>
                   {row?.soh}
                 </TableCell>
-                <TableCell
-                  align="center"
-                  sx={{ fontSize: "12px", color: "#7A797D" }}
-                >
+                <TableCell align="center" sx={{ fontSize: "12px", color: "#7A797D" }}>
                   <br />
                 </TableCell>
-                <TableCell
-                  align="center"
-                  sx={{ fontSize: "12px", color: "#7A797D" }}
-                >
+                <TableCell align="center" sx={{ fontSize: "12px", color: "#7A797D" }}>
                   <br />
                 </TableCell>
-                <TableCell
-                  align="center"
-                  sx={{ fontSize: "12px", color: "#7A797D" }}
-                >
+                <TableCell align="center" sx={{ fontSize: "12px", color: "#7A797D" }}>
                   {row?.rank}
                 </TableCell>
-                <TableCell
-                  align="center"
-                  sx={{ fontSize: "12px", color: "#7A797D" }}
-                >
+                <TableCell align="center" sx={{ fontSize: "12px", color: "#7A797D" }}>
                   <br />
                 </TableCell>
-                <TableCell
-                  align="center"
-                  sx={{ fontSize: "12px", color: "#7A797D" }}
-                >
+                <TableCell align="center" sx={{ fontSize: "12px", color: "#7A797D" }}>
                   {row?.share}
                 </TableCell>
               </TableRow>
             ))}
-            <TableRow
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
+            <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
               <TableCell component="th" scope="row">
                 <br />
               </TableCell>
@@ -163,6 +106,8 @@ const ProductAnalysisTable = () => {
           </TableBody>
         </Table>
       </TableContainer>
+
+      <p style={{ fontSize: "12px", color: "#7A797D" }}>Designed for users to instantly see the market situations of competitors on the marketplace and predicts what will come next.</p>
     </section>
   );
 };

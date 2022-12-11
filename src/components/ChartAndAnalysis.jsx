@@ -9,6 +9,7 @@ import {
   TableBody,
   TableRow,
   TableCell,
+  LinearProgress,
 } from "@mui/material";
 import React from "react";
 import BuyBoxPriceStatus from "./BuyBoxPriceStatus";
@@ -114,6 +115,7 @@ const ChartAndAnalysis = () => {
               </p>
               <Stack
                 direction="row"
+                alignItems="center"
                 justifyContent="space-between"
                 sx={{
                   fontSize: "12px",
@@ -122,8 +124,19 @@ const ChartAndAnalysis = () => {
                   mx: 3,
                 }}
               >
-                <p>40% Demand</p>
-                <p>60% Supply</p>
+                <p style={{width: "25%"}}>40% Demand</p>
+                <LinearProgress
+                  variant="determinate"
+                  value={25}
+                  sx={{
+                    width: "45%",
+                    padding: "1px",
+                    borderRadius: "5px",
+                    bgcolor: "red",
+                    margin: "2px 0px",
+                  }}
+                />
+                <p style={{width: "25%"}}>60% Supply</p>
               </Stack>
             </Box>
           </Card>
