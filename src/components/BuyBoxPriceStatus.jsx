@@ -35,10 +35,7 @@ const BuyBoxPriceStatus = () => {
 
     for (let i = 0; i < 100; i++) {
       let start = new Date();
-      dayBalanceData.push([
-        start.setDate(start.getDate() + i - 100),
-        dayDummyData[i],
-      ]);
+      dayBalanceData.push([start.setDate(start.getDate() + i - 100), dayDummyData[i]]);
     }
     return [{ data: dayBalanceData }];
   };
@@ -50,10 +47,7 @@ const BuyBoxPriceStatus = () => {
 
     for (let i = 0; i < 100; i++) {
       let start = new Date();
-      weekBalanceData.push([
-        start.setDate(start.getDate() + i * 7 - 100 * 7),
-        weekDummyData[i],
-      ]);
+      weekBalanceData.push([start.setDate(start.getDate() + i * 7 - 100 * 7), weekDummyData[i]]);
     }
     return [{ data: weekBalanceData }];
   };
@@ -65,10 +59,7 @@ const BuyBoxPriceStatus = () => {
 
     for (let i = 0; i < 100; i++) {
       let start = new Date();
-      monthBalanceData.push([
-        start.setDate(start.getDate() + i * 30 - 100 * 30),
-        monthDummyData[i],
-      ]);
+      monthBalanceData.push([start.setDate(start.getDate() + i * 30 - 100 * 30), monthDummyData[i]]);
     }
     return [{ data: monthBalanceData }];
   };
@@ -80,10 +71,7 @@ const BuyBoxPriceStatus = () => {
 
     for (let i = 0; i < 100; i++) {
       let start = new Date();
-      yearBalanceData.push([
-        start.setDate(start.getDate() + i * 365 - 100 * 365),
-        yearDummyData[i],
-      ]);
+      yearBalanceData.push([start.setDate(start.getDate() + i * 365 - 100 * 365), yearDummyData[i]]);
     }
     return [{ data: yearBalanceData }];
   };
@@ -137,14 +125,9 @@ const BuyBoxPriceStatus = () => {
   };
 
   return (
-    <Box sx={{ padding: "25px", boxShadow: 5, borderRadius: "10px" }}>
+    <Box sx={{ padding: "", boxShadow: 5, borderRadius: "10px" }}>
       <TabContext value={value}>
-        <Stack
-          direction={{ xs: "column", md: "row" }}
-          alignItems="center"
-          justifyContent="space-between"
-          spacing={2}
-        >
+        <Stack direction={{ xs: "column", md: "row" }} alignItems="center" justifyContent="space-between" spacing={2} padding="25px">
           <h2
             style={{
               fontSize: "17px",
@@ -165,56 +148,38 @@ const BuyBoxPriceStatus = () => {
                 },
               }}
             >
-              {tabData.map((tab) => (
-                <Button
-                  key={tab.value}
-                  value={tab.value}
-                  variant={value === tab.value ? "contained" : "text"}
-                  size="small"
-                  onClick={() => setValue(tab.value)}
-                  sx={{
-                    padding: "8px 20px",
-                    fontSize: "10px",
-                    mx: { xs: 0, md: "5px" },
-                  }}
-                >
-                  {tab.label}
-                </Button>
-              ))}
+              <Stack direction={{ sm: "row" }}>
+                {tabData.map((tab) => (
+                  <Button
+                    key={tab.value}
+                    value={tab.value}
+                    variant={value === tab.value ? "contained" : "text"}
+                    size="small"
+                    onClick={() => setValue(tab.value)}
+                    sx={{
+                      padding: "8px 20px",
+                      fontSize: "10px",
+                      mx: { xs: 0, md: "5px" },
+                    }}
+                  >
+                    {tab.label}
+                  </Button>
+                ))}
+              </Stack>
             </TabList>
           </Box>
         </Stack>
         <TabPanel value="1">
-          <Chart
-            options={apexChartOpts}
-            series={getDayBalance()}
-            type="area"
-            height={346}
-          />
+          <Chart options={apexChartOpts} series={getDayBalance()} type="area" height={346} />
         </TabPanel>
         <TabPanel value="2">
-          <Chart
-            options={apexChartOpts}
-            series={getWeekBalance()}
-            type="area"
-            height={346}
-          />
+          <Chart options={apexChartOpts} series={getWeekBalance()} type="area" height={346} />
         </TabPanel>
         <TabPanel value="3">
-          <Chart
-            options={apexChartOpts}
-            series={getMonthBalance()}
-            type="area"
-            height={346}
-          />
+          <Chart options={apexChartOpts} series={getMonthBalance()} type="area" height={346} />
         </TabPanel>
         <TabPanel value="4">
-          <Chart
-            options={apexChartOpts}
-            series={getYearBalance()}
-            type="area"
-            height={346}
-          />
+          <Chart options={apexChartOpts} series={getYearBalance()} type="area" height={346} />
         </TabPanel>
       </TabContext>
     </Box>
