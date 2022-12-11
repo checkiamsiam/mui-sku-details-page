@@ -89,7 +89,7 @@ const ComparableTradeVolume = () => {
                 sx={{ fontSize: "12px", fontWeight: "600" }}
               >
                 <Stack direction="row" alignItems="center">
-                  <span>See All Skus</span>
+                  <span>See All SKUs</span>
                   <KeyboardArrowRightIcon />
                 </Stack>
               </Link>
@@ -271,7 +271,7 @@ const ComparableTradeVolume = () => {
                 sx={{ fontSize: "12px", fontWeight: "600" }}
               >
                 <Stack direction="row" alignItems="center">
-                  <span>See All Skus</span>
+                  <span>See All SKUs</span>
                   <KeyboardArrowRightIcon />
                 </Stack>
               </Link>
