@@ -25,12 +25,15 @@ import {
   MenuItem,
   Grid,
   Stack,
+  Checkbox,
+  FormControlLabel,
 } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 import saudiImg from "../assets/images/noon-saudi.svg";
 import SkuProduct from "../assets/images/sku-product.png";
 import alertModalData from "../assets/data/AlertData";
 
+let delivery_method = []
 const ProductAnalysisCardOne = () => {
   const [labelTime, setLabelTime] = useState("24H");
   const handleLabelTime = (t) => {
@@ -94,12 +97,22 @@ const ProductAnalysisCardOne = () => {
     price_moves_above: "",
     frequency: "",
     comment: "",
-    delivery_method: "",
+    delivery_method: [],
     summary: "",
   });
+  
   const handleChange = (e) => {
-    console.log(e);
     setAlertData({ ...alertData, [e.target.name]: e.target.value });
+  };
+
+  const handleChangeDeliveryMethod = (e) => {
+    if (e.target.checked) {
+      delivery_method.push(e.target.name)
+      setAlertData({ ...alertData, delivery_method });
+    } else {
+      delivery_method = delivery_method.filter(item => item !== e.target.name)
+      setAlertData({ ...alertData, delivery_method });
+    }
   };
 
   // colors
@@ -464,6 +477,34 @@ const ProductAnalysisCardOne = () => {
                   </Grid>
                 ))}
               </Grid>
+
+              {/* Alert Delivery Method */}
+              <Stack
+                direction="row"
+                alignItems="center"
+                justifyContent="center"
+                spacing={1}
+              >
+                <span style={{ fontSize: "15px", color: gray, fontWeight: 500 }}>
+                  Delivery Method
+                </span>
+                <FormControlLabel
+                  control={<Checkbox />}
+                  label="WhatsApp"
+                  name="whatsapp"
+                  id="whatsapp"
+                  value="whatsapp"
+                  onChange={handleChangeDeliveryMethod}
+                />
+                <FormControlLabel
+                  control={<Checkbox />}
+                  label="Email"
+                  name="email"
+                  id="email"
+                  value="email"
+                  onChange={handleChangeDeliveryMethod}
+                />
+              </Stack>
             </Box>
           </DialogContentText>
         </DialogContent>
